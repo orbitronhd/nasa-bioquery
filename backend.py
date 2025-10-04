@@ -2,7 +2,7 @@
 from transformers import pipeline
 # In backend.py
 from sentence_transformers.util import semantic_search
-import pytorch
+import torch
 # Use a smaller model for speed
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
 
