@@ -5,4 +5,9 @@ BioQuery, is an AI-powered dashboard that transforms decades of siloed NASA bios
 ## What It Does 
 The application allows users to perform intelligent, context-aware searches across a curated dataset of 608 NASA bioscience publications. Users can instantly find the most relevant papers for any query, generate on-demand AI summaries of complex abstracts, and visualize the entire research landscape as an interactive network graph of key scientific concepts.
 
-Bioscience research source: https://github.com/jgalazka/SB_publications/
+Bioscience research source: [SB_publications](https://github.com/jgalazka/SB_publications/)
+
+## How To Run
+Clone repo into local.
+Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk pyvis`
+Run `streamlit run app.py`
