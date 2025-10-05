@@ -2,6 +2,7 @@
 
 BioQuery, is an AI-powered dashboard that transforms decades of siloed NASA bioscience research into an interactive, queryable knowledge engine, designed to accelerate discovery and support the future of human space exploration.
 
-What It Does: The application allows users to perform intelligent, context-aware searches across a curated dataset of 608 NASA bioscience publications. Users can instantly find the most relevant papers for any query, generate on-demand AI summaries of complex abstracts, and visualize the entire research landscape as an interactive network graph of key scientific concepts.
+## What It Does 
+The application allows users to perform intelligent, context-aware searches across a curated dataset of 608 NASA bioscience publications. Users can instantly find the most relevant papers for any query, generate on-demand AI summaries of complex abstracts, and visualize the entire research landscape as an interactive network graph of key scientific concepts.
 
 Bioscience research source: https://github.com/jgalazka/SB_publications/
