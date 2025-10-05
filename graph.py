@@ -11,12 +11,12 @@ def generate_keyword_network_graph(df, top_n=30, co_occurrence_threshold=5):
     # Add custom stopwords
     stop_words.update(['study', 'results', 'showed', 'effects', 'effect', 'also', 'using', 'space', 'flight'])
 
-    corpus = " ".join(df['abstract'].dropna().tolist()).lower()
+    corpus = " ".join(df['Abstract'].dropna().tolist()).lower()
     words = [word for word in word_tokenize(corpus) if word.isalpha() and word not in stop_words]
     most_common_words = [word for word, freq in Counter(words).most_common(top_n)]
 
     co_occurrences = Counter()
-    for abstract in df['abstract'].dropna():
+    for abstract in df['Abstract'].dropna():
         tokens = set([word for word in word_tokenize(abstract.lower()) if word in most_common_words])
         for pair in combinations(sorted(tokens), 2):
             co_occurrences[pair] += 1

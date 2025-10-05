@@ -5,7 +5,7 @@ import numpy as np
 
 # Corrected code:
 df = pd.read_csv('publications.csv', encoding='latin-1')
-abstracts = df['abstract'].fillna('').tolist() 
+abstracts = df['Abstract'].fillna('').tolist() 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 print("Generating embeddings for all abstracts...")
