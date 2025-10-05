@@ -121,7 +121,7 @@ def main():
         return
 
     # --- SIDEBAR ---
-    st.sidebar.image("NASA_logo.svg")
+    st.sidebar.image("Frame 1.png")
     st.sidebar.header("About")
     st.sidebar.markdown("This tool uses AI to help you search and understand NASA's extensive library of bioscience research publications. Enter a topic to find relevant papers and generate quick summaries.")
     st.sidebar.markdown("---")
@@ -181,4 +181,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
