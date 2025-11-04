@@ -121,7 +121,7 @@ def main():
         return
 
     # --- SIDEBAR ---
-    st.sidebar.image("bioquery-logo.png")
+    st.sidebar.image("raw/bioquery-logo.png")
     st.sidebar.header("About")
     st.sidebar.markdown("This tool uses AI to help you search and understand NASA's extensive library of bioscience research publications. Enter a topic to find relevant papers and generate quick summaries.")
     st.sidebar.markdown("---")
