@@ -121,7 +121,7 @@ def main():
         return
 
     # --- SIDEBAR ---
-    st.sidebar.image("Frame 1.png")
+    st.sidebar.image("bioquery-logo.png")
     st.sidebar.header("About")
     st.sidebar.markdown("This tool uses AI to help you search and understand NASA's extensive library of bioscience research publications. Enter a topic to find relevant papers and generate quick summaries.")
     st.sidebar.markdown("---")
@@ -131,7 +131,7 @@ def main():
     st.sidebar.markdown(f"Kochi, India | 2025-10-05")
 
     # --- MAIN CONTENT & SEARCH AREA ---
-    st.markdown("<h1 style='text-align: center; color: white;'>NASA Bio-Query</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'>NASA BioQuery</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #FAFAFA;'>An AI-powered dashboard to search and summarize NASA's bioscience research.</p>", unsafe_allow_html=True)
     st.write("") 
 
