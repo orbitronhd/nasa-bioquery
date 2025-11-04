@@ -19,5 +19,5 @@ Run `streamlit run app.py`.
 <a href="https://github.com/orbitronhd/nasa-bioquery/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=orbitronhd/nasa-bioquery" />
 </a>
-
+  
 © 2025 Orbitron HD, the Astrogirians team.
