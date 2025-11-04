@@ -1,5 +1,7 @@
 # NASA BioQuery
 
+<img src="https://github.com/orbitronhd/nasa-bioquery/raw/main/assets/sample-1.png" width="400">
+
 NASA BioQuery, is an AI-powered dashboard that transforms decades of siloed NASA bioscience research into an interactive, queryable knowledge engine, designed to accelerate discovery and support the future of human space exploration.
 
 ## What It Does 
