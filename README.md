@@ -15,4 +15,9 @@ Clone repo into local.
 Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk pyvis`.  
 Run `streamlit run app.py`.
 
+## Contributors
+<a href="https://github.com/orbitronhd/nasa-bioquery/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=orbitronhd/nasa-bioquery" />
+</a>
+
 © 2025 Orbitron HD, the Astrogirians team.
