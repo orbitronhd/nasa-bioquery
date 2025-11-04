@@ -107,7 +107,7 @@ def main():
     """The main function to run the Streamlit app."""
     setup_nltk()
     local_css("style.css")
-    set_bg_from_local("background.jpg") # This now loads your local image for the whole page
+    set_bg_from_local("assets/background.jpg") # This now loads your local image for the whole page
 
     with st.spinner("Loading AI models and data... This may take a moment."):
         search_model, summarizer_pipeline = load_models()
