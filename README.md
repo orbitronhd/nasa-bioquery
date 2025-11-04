@@ -10,14 +10,14 @@ The application allows users to perform intelligent, context-aware searches acro
 
 Bioscience research source: [SB_publications](https://github.com/jgalazka/SB_publications/)
 
-## How To Run
-Clone repo into local.  
-Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk pyvis`.  
-Run `streamlit run app.py`.
-
 ## Contributors
 <a href="https://github.com/orbitronhd/nasa-bioquery/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=orbitronhd/nasa-bioquery" />
 </a>
+
+## How To Run
+Clone repo into local.  
+Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk pyvis`.  
+Run `streamlit run app.py`.
   
 © 2025 Orbitron HD, the Astrogirians team.
