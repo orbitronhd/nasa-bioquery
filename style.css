@@ -8,7 +8,7 @@ body {
 
 /* Main background color */
 .stApp {
-    background-color: #0E1117; /* A deep, dark blue-grey */
+    background-color: #0E1117;
 }
 
 /* --- HEADERS AND TITLES --- */
@@ -17,12 +17,12 @@ h1, h2, h3 {
 }
 
 h1 {
-    color: #FFFFFF; /* White */
+    color: #FFFFFF;
 }
 
 /* --- SIDEBAR STYLING --- */
 [data-testid="stSidebar"] {
-    background-color: #1a1f2e; /* A slightly lighter blue for contrast */
+    background-color: #1a1f2e;
     border-right: 1px solid #262730;
 }
 
