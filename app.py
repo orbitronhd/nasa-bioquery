@@ -39,7 +39,8 @@ def set_bg_from_local(file_path):
         style = f"""
         <style>
         [data-testid="stApp"] > div {{
-            background-image: linear-gradient(rgba(14, 17, 23, 0.8), rgba(14, 17, 23, 0.8)), url("data:image/jpg;base64,{encoded_string}");
+            background-image: linear-gradient(rgba(14, 17, 23, 0.8), rgba(14, 17, 23, 0.8)),
+                              url("data:image/jpg;base64,{encoded_string}");
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
