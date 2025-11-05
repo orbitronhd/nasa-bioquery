@@ -8,7 +8,6 @@ import numpy as np
 import torch
 from backend import get_summary, search
 
-# --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="NASA Bioscience Explorer",
     page_icon="",
@@ -16,7 +15,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# --- STYLING FUNCTIONS ---
 def local_css(file_name):
     """Loads a local CSS file into the Streamlit app."""
     if os.path.exists(file_name):
@@ -54,7 +52,6 @@ def set_bg_from_local(file_path):
             f"Background image '{file_path}' not found. Please make sure it's in the same folder as the script."
         )
 
-# --- NLTK DATA SETUP ---
 @st.cache_resource
 def setup_nltk():
     """Downloads necessary NLTK data if not already present."""
@@ -67,7 +64,6 @@ def setup_nltk():
     except LookupError:
         nltk.download("punkt")
 
-# --- MODEL & DATA LOADING ---
 @st.cache_resource
 def load_data():
     """Loads the publication data and pre-computed embeddings."""
@@ -80,14 +76,13 @@ def load_data():
     except FileNotFoundError:
         return None, None
 
-# --- MAIN APPLICATION ---
 def main():
     """The main function to run the Streamlit app."""
     setup_nltk()
     local_css("style.css")
     set_bg_from_local(
         "assets/background.jpg"
-    )  # This now loads your local image for the whole page
+    )
 
     with st.spinner("Loading AI models and data... This may take a moment."):
         df, embeddings_tensor = load_data()
