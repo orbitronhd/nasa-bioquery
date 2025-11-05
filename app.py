@@ -5,9 +5,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import torch
-from sentence_transformers import SentenceTransformer
-from sentence_transformers.util import semantic_search
-from transformers import pipeline
+
+# Import backend functions
+from backend import get_summary, search
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -69,38 +69,16 @@ def setup_nltk():
 
 # --- MODEL & DATA LOADING ---
 @st.cache_resource
-def load_models():
-    """Loads the sentence transformer and summarization models."""
-    search_model = SentenceTransformer("all-MiniLM-L6-v2")
-    summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
-    return search_model, summarizer
-
-@st.cache_data
 def load_data():
     """Loads the publication data and pre-computed embeddings."""
     try:
         df = pd.read_csv("publications.csv", encoding="latin-1")
         embeddings = np.load("embeddings.npy")
         embeddings_tensor = torch.from_numpy(embeddings)
+        # Models are loaded in backend.py, so we don't need to load them here.
         return df, embeddings_tensor
     except FileNotFoundError:
         return None, None
-
-# --- BACKEND FUNCTIONS ---
-def search(query, search_model, embeddings_tensor, top_k=10):
-    """Performs semantic search."""
-    if not query:
-        return []
-    query_embedding = search_model.encode(query, convert_to_tensor=True)
-    hits = semantic_search(query_embedding, embeddings_tensor, top_k=top_k)
-    return hits[0]
-
-def get_summary(text, _summarizer):
-    """Generates a summary for a given text."""
-    if not text or len(text.split()) < 50:
-        return "The abstract is too short to generate a meaningful summary."
-    summary = _summarizer(text[:1024], max_length=150, min_length=40, do_sample=False)
-    return summary[0]["summary_text"]
 
 # --- MAIN APPLICATION ---
 def main():
@@ -112,7 +90,6 @@ def main():
     )  # This now loads your local image for the whole page
 
     with st.spinner("Loading AI models and data... This may take a moment."):
-        search_model, summarizer_pipeline = load_models()
         df, embeddings_tensor = load_data()
 
     if "df" not in st.session_state:
@@ -170,7 +147,7 @@ def main():
 
     if search_button:
         with st.spinner("Searching through publications..."):
-            hits = search(query, search_model, embeddings_tensor)
+            hits = search(query, embeddings_tensor)
             st.session_state.hits = hits
 
     if "hits" in st.session_state:
@@ -200,9 +177,7 @@ def main():
                     summary_button_key = f"summary_{paper_index}"
                     if st.button("Generate AI Summary", key=summary_button_key):
                         with st.spinner("Generating summary with AI..."):
-                            summary = get_summary(
-                                paper_data["Abstract"], summarizer_pipeline
-                            )
+                            summary = get_summary(paper_data["Abstract"])
                             st.info(f"**AI Summary:** {summary}")
         else:
             st.warning("No relevant results found. Please try a different query.")
