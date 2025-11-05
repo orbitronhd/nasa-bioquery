@@ -4,7 +4,7 @@ from sentence_transformers.util import semantic_search
 from sentence_transformers import SentenceTransformer
 
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
-search_model = SentenceTransformer("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext")
+search_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def get_summary(text):
     """Generates a summary for a given text using a pre-loaded model."""
