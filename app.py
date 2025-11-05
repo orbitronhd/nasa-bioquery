@@ -5,8 +5,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import torch
-
-# Import backend functions
 from backend import get_summary, search
 
 # --- PAGE CONFIGURATION ---
