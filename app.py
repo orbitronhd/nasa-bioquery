@@ -20,7 +20,7 @@ st.set_page_config(
 def local_css(file_name):
     """Loads a local CSS file into the Streamlit app."""
     if os.path.exists(file_name):
-        with open(file_name) as f:
+        with open(file_name, encoding="utf-8") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 @st.cache_data
@@ -110,7 +110,7 @@ def main():
     st.sidebar.info(f"Loaded {len(df)} publications.")
     st.sidebar.markdown("---")
     st.sidebar.markdown("Built for the NASA Space Apps Challenge.")
-    st.sidebar.markdown(f"Kochi, India | 05-10-2025")
+    st.sidebar.markdown("Kochi, India | 05-10-2025")
 
     # --- MAIN CONTENT & SEARCH AREA ---
     st.markdown(
@@ -123,7 +123,7 @@ def main():
     )
     st.write("")
 
-    col1, col2, col3 = st.columns([1, 3, 1])
+    col1, col2, _ = st.columns([1, 3, 1])
     with col2:
         query = st.text_area(
             "Search Query",
