@@ -1,3 +1,4 @@
+"""Pre-processes publication data to generate and save sentence embeddings."""
 from sentence_transformers import SentenceTransformer  # type: ignore
 import pandas as pd
 import numpy as np

@@ -1,3 +1,4 @@
+"""Streamlit web application for NASA BioQuery."""
 import os
 import base64
 import nltk
