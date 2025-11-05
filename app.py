@@ -134,7 +134,7 @@ def main():
     st.sidebar.info(f"Loaded {len(df)} publications.")
     st.sidebar.markdown("---")
     st.sidebar.markdown("Built for the NASA Space Apps Challenge.")
-    st.sidebar.markdown(f"Kochi, India | 2025-10-05")
+    st.sidebar.markdown(f"Kochi, India | 05-10-2025")
 
     # --- MAIN CONTENT & SEARCH AREA ---
     st.markdown(
