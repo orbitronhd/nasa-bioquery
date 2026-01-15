@@ -20,4 +20,4 @@ Clone repo into local.
 Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk`.  
 Run `streamlit run app.py`.  
   
-© 2025 Orbitron HD, the Astrogirians team.
+By Orbitron HD and the Astrogirians team.
