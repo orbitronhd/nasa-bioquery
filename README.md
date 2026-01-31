@@ -16,7 +16,7 @@ Bioscience research source: [SB_publications](https://github.com/jgalazka/SB_pub
 </a>
 
 ## How To Run
-Clone repo into .  
+Clone repo into local.  
 Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk`.  
 Run `streamlit run app.py`.  
   
