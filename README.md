@@ -8,7 +8,7 @@ NASA BioQuery, is an AI-powered dashboard that transforms decades of siloed NASA
 ## What It Does 
 The application allows users to perform intelligent, context-aware searches across a curated dataset of 601 NASA bioscience publications. Users can instantly find the most relevant papers for any query, generate on demand AI summaries of complex abstracts.
 
-Bioscience research source: [SB_publications](https://github.com/jgalazka/SB_publications/)
+NASA Bioscience research source: [SB_publications](https://github.com/jgalazka/SB_publications/)
 
 ## Contributors
 <a href="https://github.com/orbitronhd/nasa-bioquery/graphs/contributors">
