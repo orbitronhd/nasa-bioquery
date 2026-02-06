@@ -17,7 +17,10 @@ NASA Bioscience research source: [SB_publications](https://github.com/jgalazka/S
 
 ## How To Run
 Clone repo into local.  
-Install neccessary packages: `pip install streamlit pandas torch transformers sentence-transformers nltk`.  
-Run `streamlit run app.py`.  
+Install neccessary packages: 
+````pip install -r requirements.txt````
+
+Run 
+````streamlit run app.py````  
   
 By Orbitron HD and the Astrogirians team.
