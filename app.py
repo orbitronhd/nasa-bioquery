@@ -179,3 +179,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+#contrib_comment-praful: This is the main Streamlit application for NASA BioQuery. It sets up the UI, loads necessary data and models, and handles user interactions for searching and summarizing research publications. The app is designed to be visually appealing with a custom background and styling, while also being functional and responsive.
